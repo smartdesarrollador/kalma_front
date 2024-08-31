@@ -20,6 +20,7 @@ import { Jumbotron1Component } from '../../layout/componentes/jumbotron-1/jumbot
 import { Subscribe1Component } from '../../layout/componentes/subscribe-1/subscribe-1.component';
 import { CarouselOwl1Component } from '../../layout/componentes/carousel-owl-1/carousel-owl-1.component';
 import { BotonWhatsappComponent } from '../../layout/componentes/boton-whatsapp/boton-whatsapp.component';
+import { NavbarStickyComponent } from '../../layout/componentes/navbar-sticky/navbar-sticky.component';
 
 /* import * as AOS from 'aos'; */
 
@@ -45,6 +46,7 @@ import { BotonWhatsappComponent } from '../../layout/componentes/boton-whatsapp/
     Subscribe1Component,
     CarouselOwl1Component,
     BotonWhatsappComponent,
+    NavbarStickyComponent,
   ],
   templateUrl: './vista.component.html',
   styleUrl: './vista.component.css',
