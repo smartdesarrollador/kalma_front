@@ -23,6 +23,8 @@ import { LayoutTresComponent } from './layout/layout-tres/layout-tres.component'
 import { DetalleCursoComponent } from './pages/vista/detalle-curso/detalle-curso.component';
 import { ContactoComponent } from './pages/vista/contacto/contacto.component';
 import { EspecialidadesComponent } from './pages/vista/especialidades/especialidades.component';
+import { MisionVisionComponent } from './pages/vista/nosotros/mision-vision/mision-vision.component';
+import { EquipoComponent } from './pages/vista/nosotros/equipo/equipo.component';
 
 export const routes: Routes = [
   {
@@ -47,6 +49,24 @@ export const routes: Routes = [
         component: InicioComponent,
       },
       {
+        path: 'que-es-kalma',
+        component: MisionVisionComponent,
+      },
+      {
+        path: 'equipo-kalma',
+        component: EquipoComponent,
+      },
+    ],
+  },
+  /* {
+    path: '',
+    component: VistaComponent,
+    children: [
+      {
+        path: '',
+        component: InicioComponent,
+      },
+      {
         path: 'cursos',
         component: CursosComponent,
       },
@@ -63,7 +83,7 @@ export const routes: Routes = [
         component: ContactoComponent,
       },
     ],
-  },
+  }, */
   {
     path: 'layout',
     component: LayoutComponent,

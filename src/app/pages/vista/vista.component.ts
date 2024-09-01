@@ -21,6 +21,7 @@ import { Subscribe1Component } from '../../layout/componentes/subscribe-1/subscr
 import { CarouselOwl1Component } from '../../layout/componentes/carousel-owl-1/carousel-owl-1.component';
 import { BotonWhatsappComponent } from '../../layout/componentes/boton-whatsapp/boton-whatsapp.component';
 import { NavbarStickyComponent } from '../../layout/componentes/navbar-sticky/navbar-sticky.component';
+import { FooterSimpleComponent } from '../../layout/componentes/footer-simple/footer-simple.component';
 
 /* import * as AOS from 'aos'; */
 
@@ -47,6 +48,7 @@ import { NavbarStickyComponent } from '../../layout/componentes/navbar-sticky/na
     CarouselOwl1Component,
     BotonWhatsappComponent,
     NavbarStickyComponent,
+    FooterSimpleComponent,
   ],
   templateUrl: './vista.component.html',
   styleUrl: './vista.component.css',
