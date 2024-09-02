@@ -25,6 +25,7 @@ import { ContactoComponent } from './pages/vista/contacto/contacto.component';
 import { EspecialidadesComponent } from './pages/vista/especialidades/especialidades.component';
 import { MisionVisionComponent } from './pages/vista/nosotros/mision-vision/mision-vision.component';
 import { EquipoComponent } from './pages/vista/nosotros/equipo/equipo.component';
+import { InformacionComponent } from './pages/vista/informacion/informacion.component';
 
 export const routes: Routes = [
   {
@@ -55,6 +56,10 @@ export const routes: Routes = [
       {
         path: 'equipo-kalma',
         component: EquipoComponent,
+      },
+      {
+        path: 'informacion',
+        component: InformacionComponent,
       },
     ],
   },
