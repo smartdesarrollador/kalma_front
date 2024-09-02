@@ -26,9 +26,18 @@ import { EspecialidadesComponent } from './pages/vista/especialidades/especialid
 import { MisionVisionComponent } from './pages/vista/nosotros/mision-vision/mision-vision.component';
 import { EquipoComponent } from './pages/vista/nosotros/equipo/equipo.component';
 import { InformacionComponent } from './pages/vista/informacion/informacion.component';
+import { BlogComponent } from './pages/vista/blog/blog.component';
+import { AnsiedadComponent } from './pages/vista/blog/ansiedad/ansiedad.component';
+import { DepresionComponent } from './pages/vista/blog/depresion/depresion.component';
+import { EstresComponent } from './pages/vista/blog/estres/estres.component';
+import { TranstornosDePersonalidadComponent } from './pages/vista/blog/transtornos-de-personalidad/transtornos-de-personalidad.component';
+import { EstadosDeAnimoComponent } from './pages/vista/blog/estados-de-animo/estados-de-animo.component';
+import { RelacionesComponent } from './pages/vista/blog/relaciones/relaciones.component';
+import { DesarrolloPersonalComponent } from './pages/vista/blog/desarrollo-personal/desarrollo-personal.component';
+import { TipsPsicologicosComponent } from './pages/vista/blog/tips-psicologicos/tips-psicologicos.component';
 
 export const routes: Routes = [
-  {
+  /* {
     path: 'auth',
     children: [
       {
@@ -40,7 +49,7 @@ export const routes: Routes = [
         component: RegisterComponent,
       },
     ],
-  },
+  }, */
   {
     path: '',
     component: VistaComponent,
@@ -60,6 +69,46 @@ export const routes: Routes = [
       {
         path: 'informacion',
         component: InformacionComponent,
+      },
+      {
+        path: 'contactanos',
+        component: ContactoComponent,
+      },
+      {
+        path: 'blog',
+        component: BlogComponent,
+      },
+      {
+        path: 'blog/ansiedad',
+        component: AnsiedadComponent,
+      },
+      {
+        path: 'blog/depresion',
+        component: DepresionComponent,
+      },
+      {
+        path: 'blog/estres',
+        component: EstresComponent,
+      },
+      {
+        path: 'blog/transtornos-de-personalidad',
+        component: TranstornosDePersonalidadComponent,
+      },
+      {
+        path: 'blog/estados-de-animo',
+        component: EstadosDeAnimoComponent,
+      },
+      {
+        path: 'blog/relaciones',
+        component: RelacionesComponent,
+      },
+      {
+        path: 'blog/desarrollo-personal',
+        component: DesarrolloPersonalComponent,
+      },
+      {
+        path: 'blog/tips-psicologicos',
+        component: TipsPsicologicosComponent,
       },
     ],
   },
@@ -89,7 +138,7 @@ export const routes: Routes = [
       },
     ],
   }, */
-  {
+  /* {
     path: 'layout',
     component: LayoutComponent,
     children: [
@@ -106,7 +155,7 @@ export const routes: Routes = [
         component: LayoutTresComponent,
       },
     ],
-  },
+  }, */
   {
     path: '**',
     /* canActivate: [AuthGuard], */ component: PageNotFoundComponent,

@@ -1,4 +1,3 @@
-/* 4.- ENVIO-CORREO-V1-P2 */
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -9,24 +8,15 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import Swal from 'sweetalert2';
-import { FormularioContactoComponent } from '../../../layout/componentes/formulario-contacto/formulario-contacto.component';
-import { MapaComponent } from '../../../layout/componentes/mapa/mapa.component';
 
 @Component({
-  selector: 'app-contacto',
+  selector: 'app-formulario-contacto',
   standalone: true,
-  imports: [
-    CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    FormularioContactoComponent,
-    MapaComponent,
-  ],
-  templateUrl: './contacto.component.html',
-  styleUrl: './contacto.component.css',
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, HttpClientModule],
+  templateUrl: './formulario-contacto.component.html',
+  styleUrl: './formulario-contacto.component.css',
 })
-export class ContactoComponent {
+export class FormularioContactoComponent {
   FormContacto: any = FormGroup;
   UrlEmail: string = environment.apiUrlEmailContacto;
   constructor(
@@ -75,4 +65,3 @@ export class ContactoComponent {
     });
   }
 }
-/* /4.- ENVIO-CORREO-V1-P2 */
