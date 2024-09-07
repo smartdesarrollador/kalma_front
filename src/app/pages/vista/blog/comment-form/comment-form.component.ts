@@ -57,11 +57,12 @@ export class CommentFormComponent implements OnInit {
     if (this.commentForm.valid) {
       const newComment = this.commentForm.value;
 
-      console.log(newComment); // Agrega un console.log para verificar los datos que se están enviando
+      console.log(newComment); // Verificar los datos que se están enviando
 
       this.commentService.createComment(newComment).subscribe(
         () => {
           console.log('Comentario enviado correctamente.');
+          this.onCommentCreated(); // Llamar al método que refresca los comentarios
         },
         (error) => {
           console.error('Error al enviar el comentario:', error);
@@ -70,5 +71,10 @@ export class CommentFormComponent implements OnInit {
     } else {
       console.error('El formulario no es válido.');
     }
+  }
+
+  // Método que refresca los comentarios
+  onCommentCreated(): void {
+    this.loadComments(); // Este método recarga los comentarios sin refrescar la página
   }
 }
