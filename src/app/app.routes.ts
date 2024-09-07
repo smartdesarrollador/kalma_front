@@ -35,6 +35,8 @@ import { EstadosDeAnimoComponent } from './pages/vista/blog/estados-de-animo/est
 import { RelacionesComponent } from './pages/vista/blog/relaciones/relaciones.component';
 import { DesarrolloPersonalComponent } from './pages/vista/blog/desarrollo-personal/desarrollo-personal.component';
 import { TipsPsicologicosComponent } from './pages/vista/blog/tips-psicologicos/tips-psicologicos.component';
+import { PostByCategoryComponent } from './pages/vista/blog/post-by-category/post-by-category.component';
+import { PostDetailComponent } from './pages/vista/blog/post-detail/post-detail.component';
 
 export const routes: Routes = [
   /* {
@@ -109,6 +111,14 @@ export const routes: Routes = [
       {
         path: 'blog/tips-psicologicos',
         component: TipsPsicologicosComponent,
+      },
+      {
+        path: 'blog/post/categorie/:id',
+        component: PostByCategoryComponent,
+      },
+      {
+        path: 'blog/posts/detail/:id',
+        component: PostDetailComponent,
       },
     ],
   },

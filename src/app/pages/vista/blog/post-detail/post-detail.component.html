@@ -1,0 +1,34 @@
+<div class="container mx-auto py-8">
+  <!-- Mostrar el detalle del post solo si existe -->
+  <div *ngIf="post">
+    <!-- Título del post -->
+    <h1 class="text-3xl font-bold mb-4">{{ post.titulo }}</h1>
+
+    <!-- Información del autor y fecha de publicación -->
+    <div class="flex items-center mb-6">
+      <img
+        src="https://via.placeholder.com/50"
+        alt="{{ post.autor?.nombre }}"
+        class="w-12 h-12 rounded-full mr-4"
+      />
+      <div>
+        <p class="text-lg font-semibold">{{ post.autor?.nombre }}</p>
+        <p class="text-sm text-gray-600">
+          {{ post.fecha_publicacion | date : "dd MMMM y" }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Imagen destacada del post -->
+    <img
+      [src]="post.ruta_imagen"
+      alt="Imagen del post"
+      class="w-full h-auto object-cover mb-6"
+    />
+
+    <!-- Contenido del post -->
+    <p class="text-gray-700 leading-relaxed mb-4">{{ post.contenido }}</p>
+
+    <app-comment-form [postId]="postId"></app-comment-form>
+  </div>
+</div>

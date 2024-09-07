@@ -85,4 +85,10 @@ export const environment = {
   /* /3.- ENVIO-CORREO-V1-P2 */
   apiListarFilesTestimonio:
     'https://apikalmaperu.enfocussoluciones.pe/api/testimonios',
+
+  postsUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/posts', // Endpoint para posts
+  categoriesUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/categories', // Endpoint para categorías
+  tagsUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/tags', // Endpoint para tags
+  commentsUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/comments', // Endpoint para comentarios
+  usersUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/users', // Endpoint para usuarios
 };

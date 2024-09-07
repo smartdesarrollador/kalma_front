@@ -34,4 +34,10 @@ export const environment = {
   apiUrlEmailContacto: 'http://127.0.0.1:8000/api/contacto',
   /* /2.- ENVIO-CORREO-V1-P2 */
   apiListarFilesTestimonio: 'http://127.0.0.1:8000/api/testimonios',
+
+  postsUrl: 'http://127.0.0.1:8000/api/posts', // Endpoint para posts
+  categoriesUrl: 'http://127.0.0.1:8000/api/categories', // Endpoint para categorías
+  tagsUrl: 'http://127.0.0.1:8000/api/tags', // Endpoint para tags
+  commentsUrl: 'http://127.0.0.1:8000/api/comments', // Endpoint para comentarios
+  usersUrl: 'http://127.0.0.1:8000/api/users', // Endpoint para usuarios
 };
