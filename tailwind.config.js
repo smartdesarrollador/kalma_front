@@ -21,7 +21,11 @@ module.exports = {
         rojo_claro: "#dea69e",
       },
       fontFamily: {
+        parrafo: ["Quicksand", "sans-serif"],
         test_fuente: ["Gloria Hallelujah", "cursive"],
+        subtitulo: ["Quicksand", "sans-serif"],
+        texto: ["Quicksand", "sans-serif"],
+        titulo: ["Quicksand", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
       },
       backgroundImage: {
