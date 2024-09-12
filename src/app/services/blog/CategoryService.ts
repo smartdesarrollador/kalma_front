@@ -19,4 +19,12 @@ export class CategoryService {
       map((response) => response.data) // Asumiendo que el API devuelve un objeto con la clave 'data'
     );
   }
+
+  // Obtener una categoría por ID
+  getCategoryById(id: number): Observable<Category> {
+    const url = `${this.categoriesUrl}/${id}`;
+    return this.http.get<{ data: Category }>(url).pipe(
+      map((response) => response.data) // Asumiendo que la API devuelve un objeto con la clave 'data'
+    );
+  }
 }

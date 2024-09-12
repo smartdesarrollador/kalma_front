@@ -1,20 +1,11 @@
 <div class="container mx-auto py-6">
   <h2 class="text-xl font-bold mb-4">Comentarios</h2>
 
-  <!-- Mostrar lista de comentarios -->
-  <div
-    *ngFor="let comment of comments"
-    class="mb-4 border-b border-gray-300 pb-2"
-  >
-    <p class="font-semibold">{{ comment.nombre_comentarista }}</p>
-    <p class="text-gray-700">{{ comment.contenido }}</p>
-  </div>
-
   <!-- Formulario para agregar un nuevo comentario -->
   <form
     [formGroup]="commentForm"
     (ngSubmit)="submitComment()"
-    class="mt-4 space-y-4"
+    class="my-10 space-y-4"
   >
     <div>
       <label
@@ -69,4 +60,13 @@
       Enviar comentario
     </button>
   </form>
+
+  <!-- Mostrar lista de comentarios -->
+  <div
+    *ngFor="let comment of comments"
+    class="mb-4 border-b border-gray-300 pb-2"
+  >
+    <p class="font-semibold">{{ comment.nombre_comentarista }}</p>
+    <p class="text-gray-700">{{ comment.contenido }}</p>
+  </div>
 </div>
