@@ -6,6 +6,7 @@ import { Post } from '../../../../models/Post.model';
 import { environment } from '../../../../../environments/environment';
 import { Category } from '../../../../models/Category.model';
 import { CategoryService } from '../../../../services/blog/CategoryService';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser'; // Importar DomSanitizer
 
 @Component({
   selector: 'app-post-by-category',
@@ -18,35 +19,37 @@ export class PostByCategoryComponent implements OnInit {
   urlRaiz = environment.urlRaiz + '/';
   posts: Post[] = [];
   categoryId: number;
-  categoryName: string | undefined; // Variable para almacenar el nombre de la categoría
+  categoryName: string | undefined;
 
   constructor(
     private route: ActivatedRoute,
     private postService: PostService,
     private categoryService: CategoryService,
-    private router: Router
+    private router: Router,
+    private sanitizer: DomSanitizer // Inyectar DomSanitizer
   ) {
-    // Obtener el ID de la categoría desde la URL
     this.categoryId = +this.route.snapshot.paramMap.get('id')!;
   }
 
   ngOnInit(): void {
-    // Llamar al servicio para obtener los posts de la categoría
     this.postService.getPostsByCategory(this.categoryId).subscribe((data) => {
       this.posts = data;
     });
-
-    // Llamar al servicio para obtener el nombre de la categoría
     this.getCategoryName(this.categoryId);
   }
 
   getCategoryName(id: number): void {
     this.categoryService.getCategoryById(id).subscribe((category: Category) => {
-      this.categoryName = category.nombre; // Asumimos que el nombre de la categoría se almacena en 'nombre'
+      this.categoryName = category.nombre;
     });
   }
 
-  // Redirigir al detalle del post
+  // Método para sanitizar y limitar el contenido del post
+  getSanitizedContent(content: string, limit: number): SafeHtml {
+    const truncatedContent = content.slice(0, limit); // Cortar el contenido
+    return this.sanitizer.bypassSecurityTrustHtml(truncatedContent + '...'); // Sanitizar el contenido para que sea seguro
+  }
+
   goToPostDetail(id: number): void {
     this.router.navigate(['/blog/posts/detail/', id]);
   }
