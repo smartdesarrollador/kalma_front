@@ -58,8 +58,12 @@
 
       <!-- Contenido del post -->
       <!-- <p class="text-gray-700 leading-relaxed mb-4">{{ post.contenido }}</p> -->
-      <div class="ql-container ql-snow" style="border-width: 0">
+      <!--   <div class="ql-container ql-snow" style="border-width: 0">
         <div class="ql-editor" [innerHTML]="safeHtml"></div>
+      </div> -->
+
+      <div class="ql-container ql-snow" style="border-width: 0">
+        <div class="ql-editor ql-container" [innerHTML]="safeHtml"></div>
       </div>
 
       <app-comment-form [postId]="postId"></app-comment-form>
