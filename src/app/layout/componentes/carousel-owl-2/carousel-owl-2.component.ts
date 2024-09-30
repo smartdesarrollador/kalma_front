@@ -30,8 +30,6 @@ export class CarouselOwl2Component implements OnInit {
   }
 
   customOptions: OwlOptions = {
-    /* animateIn: 'animate__animated animate__fadeIn',
-    animateOut: 'animate__animated animate__zoomOut', */
     loop: true,
     mouseDrag: false,
     touchDrag: false,
@@ -39,13 +37,12 @@ export class CarouselOwl2Component implements OnInit {
     dots: false,
     navSpeed: 700,
     margin: 0,
-
     autoplay: true,
-
-    autoplayTimeout: 4000,
-
-    navText: ['<', '>'],
-
+    autoplayTimeout: 2000,
+    navText: [
+      '<div class="custom-nav-btn prev"><</div>',
+      '<div class="custom-nav-btn next">></div>',
+    ],
     responsive: {
       0: {
         items: 1,

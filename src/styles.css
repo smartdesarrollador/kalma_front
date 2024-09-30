@@ -104,3 +104,40 @@ body {
     animation-delay: 4s;
   }
 }
+
+/* botones owl */
+
+.custom-nav-btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev {
+  left: -50px;
+}
+
+.next {
+  right: -50px;
+}
+
+.owl-nav {
+  display: flex !important;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

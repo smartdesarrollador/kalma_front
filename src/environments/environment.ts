@@ -91,4 +91,11 @@ export const environment = {
   tagsUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/tags', // Endpoint para tags
   commentsUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/comments', // Endpoint para comentarios
   usersUrl: 'https://apikalmaperu.enfocussoluciones.pe/api/users', // Endpoint para usuarios
+  /* componente1 */
+  dominio: 'https://apikalmaperu.enfocussoluciones.pe',
+  apiBaseUrl: 'https://apikalmaperu.enfocussoluciones.pe/api', // URL base para la API de Laravel
+  endpoints: {
+    categoria1: '/categoria1',
+    tabla1: '/tabla1',
+  },
 };

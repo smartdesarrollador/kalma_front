@@ -37,6 +37,7 @@ import { DesarrolloPersonalComponent } from './pages/vista/blog/desarrollo-perso
 import { TipsPsicologicosComponent } from './pages/vista/blog/tips-psicologicos/tips-psicologicos.component';
 import { PostByCategoryComponent } from './pages/vista/blog/post-by-category/post-by-category.component';
 import { PostDetailComponent } from './pages/vista/blog/post-detail/post-detail.component';
+import { Componente1Component } from './pages/vista/componente1/componente1.component';
 
 export const routes: Routes = [
   /* {
@@ -120,6 +121,7 @@ export const routes: Routes = [
         path: 'blog/posts/detail/:id',
         component: PostDetailComponent,
       },
+      { path: 'nuestro-equipo', component: Componente1Component },
     ],
   },
   /* {
