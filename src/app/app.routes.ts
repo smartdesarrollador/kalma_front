@@ -122,6 +122,18 @@ export const routes: Routes = [
         component: PostDetailComponent,
       },
       { path: 'nuestro-equipo', component: Componente1Component },
+      {
+        path: 'servicio1',
+        component: CursosComponent,
+      },
+      {
+        path: 'servicio2',
+        component: EspecialidadesComponent,
+      },
+      {
+        path: 'detalle',
+        component: DetalleCursoComponent,
+      },
     ],
   },
   /* {
