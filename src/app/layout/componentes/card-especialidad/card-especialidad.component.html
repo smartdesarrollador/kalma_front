@@ -1,17 +1,15 @@
 <h2
-  class="text-2xl sm:text-3xl md:text-4xl text-gray-700 font-semibold my-8 leading-tight font-subtitulo text-center"
+  class="text-2xl sm:text-3xl md:text-4xl text-sky-400 font-semibold my-8 leading-tight font-subtitulo text-center"
 >
-  <span class="inline-block border-b-8 border-blue-400"
-    >Especialidades Clinicas</span
-  >
+  <span class="inline-block">Especialidades Clinicas</span>
 </h2>
 
 <div class="flex flex-wrap justify-center px-4 my-10 gap-5">
   <div
     *ngFor="let item of listBanners"
-    class="max-w-md bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700 p-3"
+    class="md:w-1/4 bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700 p-3"
   >
-    <a href="#">
+    <a (click)="onDetail(item)">
       <img class="rounded-lg" src="{{ urlRaiz + item.ruta_imagen }}" alt="" />
     </a>
     <div class="p-5">
